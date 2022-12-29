@@ -1,0 +1,105 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: whitesmoke;
+  padding: 2rem 2rem 0 2rem;
+
+}
+
+footer {
+    background-color: whitesmoke;
+  padding: 2rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.texto-footer {
+    padding: 2rem;
+    text-align: center;
+    color: darkblue;
+    font-size: .75rem;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 2rem;
+  padding: 3rem;
+  text-align: center;
+  color: darkblue;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* estilos de index.html */
+.titulo-principal {
+    color: darkblue;
+    padding-bottom: 1rem;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.producto-imagen {
+    max-width: 100% ;
+}
+
+/* estilos de carrito.html */
+
+.carrito-compra-finalizada, .carrito-vacio {
+    color: darkblue;
+}
+
+.carrito-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 0rem 4rem 0rem 0rem;
+}
+
+.carrito-acciones {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 4rem;
+    align-items: center;
+}
+
+.carrito-acciones-total {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carrito-producto-imagen {
+    width: 8rem;
+}
