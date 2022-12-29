@@ -49,6 +49,16 @@ nav ul {
   justify-content: space-evenly;
 }
 
+.boton-menu {
+  padding: 1rem;
+  border: 0.25rem solid black;
+}
+
+.active {
+  border: 0.25rem solid darkblue;
+  background-color: darkblue;
+  color: aliceblue;
+}
 /* estilos de index.html */
 .titulo-principal {
   color: darkblue;
@@ -60,7 +70,6 @@ nav ul {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-
 .producto-imagen {
   max-width: 100%;
 }
