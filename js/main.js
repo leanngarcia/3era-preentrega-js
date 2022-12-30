@@ -29,6 +29,8 @@ producto4.agregarCatalogo();
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesMenu = document.querySelectorAll(".boton-menu");
 const tituloCategoria = document.getElementById("titulo-principal");
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
+const contadorCarrito = document.getElementById("contador-carrito");
 
 function cargarProductos(productosElegidos) {
   contenedorProductos.innerHTML = "";
@@ -44,6 +46,7 @@ function cargarProductos(productosElegidos) {
 
     contenedorProductos.append(div);
   });
+  actualizarBotonesAgregar();
 }
 
 cargarProductos(productos);
@@ -57,9 +60,6 @@ botonesMenu.forEach((boton) => {
       const categoriaProducto = productos.find((producto) => producto.categoria === e.currentTarget.id);
       tituloCategoria.innerText = categoriaProducto.categoria;
 
-      console.log(categoriaProducto);
-      console.log(tituloCategoria);
-
       const productosFiltrados = productos.filter((producto) => producto.categoria === e.currentTarget.id);
       cargarProductos(productosFiltrados);
     } else {
@@ -68,3 +68,34 @@ botonesMenu.forEach((boton) => {
     }
   });
 });
+
+function actualizarBotonesAgregar() {
+  botonesAgregar = document.querySelectorAll(".producto-agregar");
+
+  botonesAgregar.forEach((boton) => {
+    boton.addEventListener("click", agregarAlCarrito);
+  });
+}
+
+const productosEnCarrito = [];
+
+function agregarAlCarrito(e) {
+  const idBoton = e.currentTarget.id;
+  const productoAgregado = productos.find((producto) => producto.id === idBoton);
+
+  if (productosEnCarrito.some((producto) => producto.id === idBoton)) {
+    const index = productosEnCarrito.findIndex((producto) => producto.id === idBoton);
+    productosEnCarrito[index].cantidad++;
+  } else {
+    productoAgregado.cantidad = 1;
+    productosEnCarrito.push(productoAgregado);
+  }
+
+  actualizarContadorCarrito();
+  localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
+
+function actualizarContadorCarrito() {
+  let nuevoContadorCarrito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+  contadorCarrito.innerHTML = nuevoContadorCarrito;
+}
