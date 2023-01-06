@@ -70,11 +70,31 @@ nav ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-}
-.producto-imagen {
-  max-width: 100%;
+  align-items: center;
+  height: 100%;
 }
 
+.producto {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.producto-imagen {
+  max-width: 100%;
+  height: 80%;
+  object-fit: contain;
+}
+
+#producto-detalle {
+  margin: auto;
+}
+
+.carrito-producto-titulo, .carrito-producto-cantidad, .carrito-producto-precio, .carrito-producto-subtotal {
+  width: 10rem;
+  margin: 0;
+}
 /* estilos de carrito.html */
 
 .carrito-compra-finalizada,
@@ -111,7 +131,9 @@ nav ul {
 }
 
 .carrito-producto-imagen {
+  height:8rem;
   width: 8rem;
+  object-fit: contain;
 }
 
 .disabled {
