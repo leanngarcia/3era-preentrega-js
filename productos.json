@@ -1,0 +1,16 @@
+[
+  { "id": "mojave", "marca": "Raleigh", "nombre": "Mojave 5.0 R29", "imagen": "./img/BIN-5.0-29-ROJA.jpg", "categoria": "MTB", "precio": 80000 },
+  { "id": "strada", "marca": "Raleigh", "nombre": "Strada 1.0 ", "imagen": "./img/strada1.0-negra-sm.jpg", "categoria": "Ruta", "precio": 200000 },
+  { "id": "urban", "marca": "Raleigh", "nombre": "Urban 1.0", "imagen": "./img/BIN-URBAN-1.1-GRIS.jpg", "categoria": "Urbana", "precio": 100000 },
+  { "id": "mxr", "marca": "Raleigh", "nombre": "Mx Kids", "imagen": "./img/Scout-Roja-1.jpg", "categoria": "Kids", "precio": 60000 },
+  { "id": "atc", "marca": "Raleigh", "nombre": "ATC", "imagen": "/img/ATC_1_Zoom-2020.jpg", "categoria": "Kids", "precio": 65000 },
+  { "id": "cimaurb", "marca": "Zenith", "nombre": "Cima Urbana", "imagen": "./img/Cima_URB_1_Zoom-2021.jpg", "categoria": "Urbana", "precio": 110000 },
+  { "id": "cimaurbdama", "marca": "Zenith", "nombre": "Cima Urbana dama", "imagen": "./img/Cima_URW_1_Zoom-2021.jpg", "categoria": "Urbana", "precio": 110000 },
+  { "id": "tarmacsl6", "marca": "Specialized", "nombre": "Tarmac SL6", "imagen": "./img/90622-61_TARMAC-SL6-SPORT-FLORED-TARBLK_HERO.webp", "categoria": "Ruta", "precio": 1200000 },
+  { "id": "epiccomp", "marca": "Specialized", "nombre": "Epic Comp", "imagen": "./img/90322-50_EPIC-COMP-MRN-ICEPPYA_HERO.webp", "categoria": "MTB", "precio": 800000 },
+  { "id": "divergee5", "marca": "Specialized", "nombre": "DIVERGE E5", "imagen": "./img/96220-72_DIVERGE-E5-BLZ-SMK-CHRM_HERO.webp", "categoria": "Ruta", "precio": 540000 },
+  { "id": "rockhopperexp", "marca": "Specialized", "nombre": "Rockhopper Expert", "imagen": "./img/91520-34_ROCKHOPPER-EXPERT-29-SKYBLU-BLK_HERO.webp", "categoria": "MTB", "precio": 450000 },
+  { "id": "rivaelite", "marca": "Zenith", "nombre": "Riva Elite", "imagen": "./img/Riva_ELT_1_Ficha-2021.jpg", "categoria": "MTB", "precio": 180000 },
+  { "id": "versa700", "marca": "Zenith", "nombre": "Versa 700", "imagen": "./img/Versa_700_1_Ficha-2021.jpg", "categoria": "Urbana", "precio": 90000 },
+  { "id": "m20", "marca": "Raleigh", "nombre": "M2.0", "imagen": "./img/BIN-2.0-roja.jpg", "categoria": "MTB", "precio": 95000 }
+]

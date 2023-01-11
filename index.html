@@ -10,12 +10,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
       <h1 class="logo">Coderbikes</h1>
 
-      <nav>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item mx-2">
+                <!--Dropdown todos los productos-->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-dark boton-menu" id="todos" href="./index.html">Productos</button>
+                  <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><button class="btn boton-menu" id="MTB">Bicicletas de montaña</button></li>
+                    <li><button class="btn boton-menu" id="Ruta">Bicicletas de ruta</button></li>
+                    <li><button class="btn boton-menu" id="Urbana">Bicicletas urbanas</button></li>
+                    <li><button class="btn boton-menu" id="Kids">Bicicletas para niños</button></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <a class="btn btn-dark btn-primary boton-carrito" href="./carrito.html" role="button">Carrito</a>
+                  <button type="button" class="btn btn-secondary contador-carrito" id="contador-carrito"></button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- <nav>
         <ul>
           <li><button class="boton-menu active" id="todos">Ver todos los productos</button></li>
           <li><button class="boton-menu" id="MTB">Bicicletas de montaña</button></li>
@@ -26,7 +65,7 @@
             <a class="boton-carrito" href="./carrito.html"> <i class="bi bi-cart-fill"></i>Carrito <span class="contador-carrito" id="contador-carrito">0</span> </a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
     <main>
       <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
@@ -38,5 +77,10 @@
       <p class="texto-footer">© 2022 Leandro Garcia</p>
     </footer>
     <script src="./js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

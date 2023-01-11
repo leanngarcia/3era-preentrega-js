@@ -8,6 +8,8 @@ let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 const botonVaciar = document.querySelector("#vaciar-carrito");
 let precioTotal = document.querySelector("#precio-total");
 const botonComprar = document.querySelector("#carrito-acciones-comprar");
+const contadorCarrito = document.getElementById("contador-carrito");
+
 function cargarProductosCarrito() {
   if (productosEnCarrito && productosEnCarrito.length > 0) {
     contenedorCarritoVacio.classList.add("disabled");
@@ -43,7 +45,7 @@ function cargarProductosCarrito() {
               <p>$${producto.precio * producto.cantidad}</p>
             </div>
 
-            <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash3"></i></button>
+            <button class="carrito-producto-eliminar border-0" id="${producto.id}"><i class="bi bi-trash"></i></button>
     `;
 
       contenedorCarritoProductos.append(div);
@@ -56,6 +58,7 @@ function cargarProductosCarrito() {
   }
   actualizarBotonesEliminar();
   actualizarTotal();
+  actualizarContadorCarrito();
 }
 
 cargarProductosCarrito();
@@ -98,14 +101,21 @@ function actualizarTotal() {
 }
 
 function finalizarCompra() {
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-    cargarProductosCarrito();
+  productosEnCarrito.length = 0;
+  localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+  cargarProductosCarrito();
 
-    contenedorCarritoVacio.classList.add("disabled");
-    contenedorCarritoProductos.classList.add("disabled");
-    contenedorCarritoAcciones.classList.add("disabled");
-    contenedorCompraFinalizada.classList.remove("disabled");
-  }
+  contenedorCarritoVacio.classList.add("disabled");
+  contenedorCarritoProductos.classList.add("disabled");
+  contenedorCarritoAcciones.classList.add("disabled");
+  contenedorCompraFinalizada.classList.remove("disabled");
+
+  actualizarContadorCarrito();
+}
 
 botonComprar.addEventListener("click", finalizarCompra);
+
+function actualizarContadorCarrito() {
+  let nuevoContadorCarrito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+  contadorCarrito.innerHTML = nuevoContadorCarrito;
+}
