@@ -113,9 +113,11 @@ function finalizarCompra() {
   actualizarContadorCarrito();
 }
 
-botonComprar.addEventListener("click", finalizarCompra);
+// botonComprar.addEventListener("click", finalizarCompra);
 
 function actualizarContadorCarrito() {
   let nuevoContadorCarrito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
   contadorCarrito.innerHTML = nuevoContadorCarrito;
 }
+
+

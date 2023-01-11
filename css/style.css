@@ -35,8 +35,6 @@ main {
   color: darkblue;
 }
 
-
-
 /* estilos de index.html */
 .titulo-principal {
   color: darkblue;
@@ -72,7 +70,10 @@ main {
   margin: auto;
 }
 
-.carrito-producto-titulo, .carrito-producto-cantidad, .carrito-producto-precio, .carrito-producto-subtotal {
+.carrito-producto-titulo,
+.carrito-producto-cantidad,
+.carrito-producto-precio,
+.carrito-producto-subtotal {
   width: 10rem;
   margin: 0;
 }
@@ -112,7 +113,7 @@ main {
 }
 
 .carrito-producto-imagen {
-  height:8rem;
+  height: 8rem;
   width: 8rem;
   object-fit: contain;
 }
@@ -123,4 +124,28 @@ main {
 
 .disabled {
   display: none;
+}
+
+/*seccion finalizar comprar*/
+.formCompra {
+  width: 480px;
+}
+
+.formCompra input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.formCompra button {
+  width: 100%;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
 }
