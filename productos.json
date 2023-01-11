@@ -3,7 +3,7 @@
   { "id": "strada", "marca": "Raleigh", "nombre": "Strada 1.0 ", "imagen": "./img/strada1.0-negra-sm.jpg", "categoria": "Ruta", "precio": 200000 },
   { "id": "urban", "marca": "Raleigh", "nombre": "Urban 1.0", "imagen": "./img/BIN-URBAN-1.1-GRIS.jpg", "categoria": "Urbana", "precio": 100000 },
   { "id": "mxr", "marca": "Raleigh", "nombre": "Mx Kids", "imagen": "./img/Scout-Roja-1.jpg", "categoria": "Kids", "precio": 60000 },
-  { "id": "atc", "marca": "Raleigh", "nombre": "ATC", "imagen": "/img/ATC_1_Zoom-2020.jpg", "categoria": "Kids", "precio": 65000 },
+  { "id": "atc", "marca": "Raleigh", "nombre": "ATC", "imagen": "./img/ATC_1_Zoom-2020.jpg", "categoria": "Kids", "precio": 65000 },
   { "id": "cimaurb", "marca": "Zenith", "nombre": "Cima Urbana", "imagen": "./img/Cima_URB_1_Zoom-2021.jpg", "categoria": "Urbana", "precio": 110000 },
   { "id": "cimaurbdama", "marca": "Zenith", "nombre": "Cima Urbana dama", "imagen": "./img/Cima_URW_1_Zoom-2021.jpg", "categoria": "Urbana", "precio": 110000 },
   { "id": "tarmacsl6", "marca": "Specialized", "nombre": "Tarmac SL6", "imagen": "./img/90622-61_TARMAC-SL6-SPORT-FLORED-TARBLK_HERO.webp", "categoria": "Ruta", "precio": 1200000 },
