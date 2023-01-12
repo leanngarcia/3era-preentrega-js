@@ -86,5 +86,3 @@ function actualizarContadorCarrito() {
   contadorCarrito.innerHTML = nuevoContadorCarrito;
 }
 
-console.log()
-

@@ -41,21 +41,72 @@
       </nav>
     </header>
 
-    <section id="finCompra" class="flex center">
-      <form class="formCompra flex flex-column">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
-        <!-- <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email">
-            <label for="tarjeta">Nro. tarjeta</label>
-            <input type="text" id="tarjeta" placeholder="Nro. tarjeta">
-            <label for="vencimiento">Fecha de vencimiento</label>
-            <input type="text" id="vencimiento" placeholder="Fecha de vencimiento">
-            <label for="codigo">Código de seguridad</label>
-            <input type="text" id="codigo" placeholder="Código de seguridad">-->
-        <button type="submit" id="confirmarCompra">Confirmar</button>
+    <main id="main">
+      <h2 class="resumen-compra" id="resumen-compra">Resumen de su compra:</h2>
+      <h3 class="lista-productos">Productos:</h3>
+      
+      <h4 class="resumen-total" id="resumen-total">Total:</h4>
+      <p id="resumen-precio-total"></p>
+      <h2 class="datos-facturacion" id="datos-facturacion">Datos de facturación:</h2>
+
+      <div class="container">
+      <form id="form">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Dirección de email:</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="email-usuario"
+            aria-describedby="emailHelp"
+          />
+        </div>
+  
+        <div class="row">
+          <div class="mb-3 col">
+            <label for="exampleInputPassword1" class="form-label">Nombre</label>
+            <input type="name" class="form-control" id="nombre-usuario" />
+          </div>
+  
+          <div class="mb-3 col">
+            <label for="exampleInputPassword1" class="form-label">Apellido</label>
+            <input type="name" class="form-control" id="apellido-usuario" />
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Dirección</label>
+          <input
+            type="text"
+            class="form-control"
+            id="direccion-usuario"
+          />
+        </div>
+  
+        <div class="row">
+          <div class="mb-3 col-8">
+            <label for="exampleInputPassword1" class="form-label">Ciudad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="ciudad-usuario"
+            />
+          </div>
+  
+          <div class="mb-3 col">
+            <label for="exampleInputPassword1" class="form-label"
+              >Código postal</label
+            >
+            <input type="number" class="form-control" id="cpostal-usuario" />
+          </div>
+        </div>
+  
+        <button type="submit" class="btn btn-primary" id="finalizar-pedido">Comprar</button>
       </form>
-    </section>
+    </div>
+      </section>
+    </main>
 
     <script src="../js/comprar.js"></script>
     <script src="../js/carrito.js"></script>
@@ -64,5 +115,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
