@@ -1,4 +1,12 @@
 /*variables*/
+
+$background-principal: #1f2023;
+$background-secundario: #27282d;
+$background-terciario: #393b43;
+$color-principal: #e5f876;
+$color-secundario: background-color var(--transition-global), transform var(--transition-global), opacity var(--transition-global), -webkit-transform var(--transition-global);
+$color-texto: white;
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +19,7 @@ header {
   background: #ea90ff;
   background: -webkit-gradient(linear, left top, right top, from(#ea90ff), to(#eaff6a));
   background: linear-gradient(to right, #ea90ff 0, #eaff6a 100%);
-  color: #1f2023;
+  color: $background-principal;
   padding: 2rem 2rem 0 2rem;
 }
 
@@ -20,7 +28,7 @@ header {
   font-size: 5rem;
   padding: 3rem;
   text-align: center;
-  font-family: "Anton", sans-serif;
+  font-family: 'Anton', sans-serif;
   font-style: italic;
 }
 
@@ -29,25 +37,24 @@ header {
 }
 
 .dropdown-menu-fondo {
-  background-color: #27282d;
+  background-color: $background-secundario;
 }
-
 .gradient-font {
   background: #ea90ff;
   background: -webkit-gradient(linear, left top, right top, from(#ea90ff), to(#eaff6a));
   background: linear-gradient(to right, #ea90ff 0, #eaff6a 100%);
-  color: #1f2023;
+  color: $background-principal;
 }
 
 /*estilos body*/
 main {
   padding: 2 rem;
-  background-color: #1f2023;
+  background-color: $background-principal;
 }
 
 .titulo-principal {
-  color: white;
-  padding: 2rem;
+    color: $color-texto;
+    padding: 2rem;
 }
 
 .contenedor-productos {
@@ -63,7 +70,7 @@ main {
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  background-color: #27282d;
+  background-color: $background-secundario;
   border-radius: 10px;
   padding: 2rem;
 }
@@ -96,4 +103,6 @@ main {
   color: white;
 }
 
-/*# sourceMappingURL=style.css.map */
+.btn-dark {
+
+}
