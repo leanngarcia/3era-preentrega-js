@@ -26,7 +26,6 @@ function cargarProductosCarrito() {
             <img class="carrito-producto-imagen" src=".${producto.imagen}" alt="${producto.nombre}" />
 
             <div class="carrito-producto-titulo">
-              <small>Producto:</small>
               <h3>${producto.marca} ${producto.nombre}</h3>
             </div>
 
@@ -45,7 +44,7 @@ function cargarProductosCarrito() {
               <p>$${producto.precio * producto.cantidad}</p>
             </div>
 
-            <button class="carrito-producto-eliminar border-0" id="${producto.id}"><i class="bi bi-trash"></i></button>
+            <button class="carrito-producto-eliminar border-0" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
     `;
 
       contenedorCarritoProductos.append(div);
