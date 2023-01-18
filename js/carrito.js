@@ -1,5 +1,6 @@
 let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
 
+/*seleccion de elementos en DOM*/
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoProductos = document.querySelector("#carrito-productos");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
@@ -10,6 +11,7 @@ let precioTotal = document.querySelector("#precio-total");
 let botonComprar = document.querySelector("#carrito-acciones-comprar");
 const contadorCarrito = document.getElementById("contador-carrito");
 
+/*pintamos los productos en el carrito dinamicamente con JS*/
 function cargarProductosCarrito() {
   if (productosEnCarrito && productosEnCarrito.length > 0) {
     contenedorCarritoVacio.classList.add("disabled");
@@ -60,8 +62,7 @@ function cargarProductosCarrito() {
   actualizarContadorCarrito();
 }
 
-cargarProductosCarrito();
-
+/*ffuncion que reinicia el boton eliminar para poder seguir eliminando productos*/
 function actualizarBotonesEliminar() {
   botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 
@@ -70,6 +71,7 @@ function actualizarBotonesEliminar() {
   });
 }
 
+/*funcion para eliminar productos en el carrito*/
 function eliminarDelCarrito(e) {
   const idBoton = e.currentTarget.id;
   const index = productosEnCarrito.findIndex((producto) => producto.id === idBoton);
@@ -85,23 +87,27 @@ function eliminarDelCarrito(e) {
   }
 }
 
+/*funcion que vacia el carrito*/
 function vaciarCarrito() {
   productosEnCarrito.length = 0;
   localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
   cargarProductosCarrito();
 }
 
-botonVaciar.addEventListener("click", vaciarCarrito);
-
-function actualizarTotal() {
-  const sumaPrecios = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
-  precioTotal.innerText = `$${sumaPrecios}`;
-}
-
-actualizarContadorCarrito();
-
+/*funcion que actualiza en contador de productos en el carrito*/
 function actualizarContadorCarrito() {
   let nuevoContadorCarrito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
   contadorCarrito.innerHTML = nuevoContadorCarrito;
 }
 
+/*funcion que suma el precio de todos los productos*/
+function actualizarTotal() {
+  const sumaPrecios = productosEnCarrito.reduce((acc, producto) => acc + producto.precio * producto.cantidad, 0);
+  precioTotal.innerText = `$${sumaPrecios}`;
+}
+
+cargarProductosCarrito();
+
+botonVaciar.addEventListener("click", vaciarCarrito);
+
+actualizarContadorCarrito();
